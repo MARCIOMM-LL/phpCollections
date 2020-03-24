@@ -6,6 +6,8 @@ class TocadorDeMusica {
 
     public function __construct(){
         $this->musicas = new SplDoublyLinkedList();
+        $this->historico = new SplStack();
+
         #Retorna a posição inicial
         $this->musicas->rewind();
     }
@@ -24,7 +26,12 @@ class TocadorDeMusica {
             echo "Erro, nenhuma música no tocador";
         }else{
             echo "Tocando música: " . $this->musicas->current() . "<br>";
+            $this->historico->push($this->musicas->current());
         }
+    }
+
+    public function tocarUltimaMusicaTocada(){
+        echo "Tocando do histórico: " . $this->historico->pop() . "<br>";
     }
 
     public function adicionarMusica($musica){

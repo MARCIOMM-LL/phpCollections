@@ -13,19 +13,5 @@ $tocador = new TocadorDeMusica();
 
 $tocador->adicionarMusicas($musicas);
 
-$tocador->tocarMusica();
-
-$tocador->avancarMusica();
-
-$tocador->tocarMusica();
-
-$tocador->avancarMusica();
-
-$tocador->tocarMusica();
-
-$tocador->avancarMusica();
-
-$tocador->tocarMusica();
-
-$tocador->tocarUltimaMusicaTocada();
+$tocador->baixarMusicas();
 
